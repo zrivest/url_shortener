@@ -8,6 +8,14 @@
     <input type="submit" value="Give me my link!">
   </form> 
   
-  
-
+  <table>
+    <h3>Recently shortend URLs</h3>
+    <tr><th>URLs</th><th>Click Count</th></tr><br>
+      <% @all_urls.reverse.each do |each_url_set| %>
+        <tr><td><%= each_url_set.original_link %></td>
+            <td><%= each_url_set.click_count %></td>
+        </tr>
+        
+      <% end %> 
+  </table>
 </div>
